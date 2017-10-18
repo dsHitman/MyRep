@@ -1,0 +1,47 @@
+//Appunti
+
+abbiamo una collection coll
+
+coll.stream()
+	.filter (el -> el > 5) //toglie gli elementi maggiori di 5, utile per le colisioni
+
+//restituisce tutti gli elementi di coll e vengono filtrati
+
+	.map (e -> e*e)
+//restituisce gli elementi al quadrato
+	.average()
+	.sum()
+	.reduction(el ->...)
+	
+InStream.range(1, 100)
+	.filter (s ->{
+		if (s>5)
+			syso(s+"Good");
+			return true;
+		else syso(s+"No good");
+		return false;
+		})
+	.map (el -> el*el)
+	.anyMatch (e->e==49)
+	
+	
+	
+Stream<String> str
+	=Stream of ("o", "b",...)
+	.filter (s->s.startwith("b"));
+	
+	str.anyMatch() //una volta usata una stream non si può riutilizzare
+	
+	Supplier<Stream<String>> sp	=
+	()->Stream of ("a", "b", "c")
+	.filter (...)
+	
+	sp.get()
+	
+	
+	
+	
+	
+	
+	
+	
